@@ -3,36 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Boda de [Nombres]</title>
+    <title>Boda de Belén Ortega y Rodney Espinoza</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <header class="hero" style="background-image: url('tu-imagen-de-fondo.jpg');">
+    <header class="hero" style="background-image: url('hero-image.png');">
         <div class="hero-content" data-aos="fade-up">
-            <h1>Nombres de los novios</h1>
-            <p>Fecha de la boda</p>
-            <a href="#rsvp" class="btn" data-aos="fade-up" data-aos-delay="200">Confirmar asistencia</a>
+            <h1>Belén Ortega y Rodney Espinoza</h1>
+            <p>18 de enero de 2025</p>
+            <a href="#confirmacion" class="btn" data-aos="fade-up" data-aos-delay="200">Confirmar asistencia</a>
         </div>
     </header>
-
-    <section id="historia" data-aos="fade-up">
-        <h2 class="section-title">Nuestra Historia</h2>
-        <!-- Contenido de la sección -->
-    </section>
 
     <section id="info-boda" data-aos="fade-up">
         <h2 class="section-title">Información de la Boda</h2>
         <div class="info-container">
             <div class="info-item" data-aos="fade-right" data-aos-delay="100">
-                <i class="fas fa-calendar-alt"></i>
-                <p>18 de enero de 2025</p>
-            </div>
-            <div class="info-item" data-aos="fade-left" data-aos-delay="200">
                 <i class="fas fa-map-marker-alt"></i>
                 <p>Ubicación del salón</p>
+                <a href="https://maps.app.goo.gl/N4PB5YfnJ4JDRHzN8" target="_blank" class="btn">Ver en Google Maps</a>
             </div>
         </div>
     </section>
@@ -59,19 +51,33 @@
         </div>
     </section>
 
-    <section id="regalos-efectivo">
-        <h2><i class="fas fa-money-bill-wave"></i> Regalos en efectivo</h2>
+    <section id="regalos-efectivo" data-aos="fade-up">
+        <h2 class="section-title">Regalos en efectivo</h2>
         <p>Si prefieres hacer un regalo en efectivo, puedes usar este código QR:</p>
-        <img src="qr-code-efectivo.png" alt="Código QR para regalos en efectivo">
+        <img src="qr-code-efectivo.png" alt="Código QR para regalos en efectivo" data-aos="zoom-in">
     </section>
 
-    <section id="confirmacion">
-        <h2 class="section-title">Confirma tu asistencia</h2>
-        <!-- Formulario de confirmación -->
+    <section id="confirmacion" data-aos="fade-up">
+        <h2 class="section-title">Confirmación de asistencia</h2>
+        <form id="form-confirmacion" data-aos="fade-up" data-aos-delay="100">
+            <div class="form-group">
+                <label for="nombre">Nombre completo:</label>
+                <input type="text" id="nombre" name="nombre" required>
+            </div>
+            <div class="form-group">
+                <label for="contacto">Correo electrónico o número de teléfono:</label>
+                <input type="text" id="contacto" name="contacto" required>
+            </div>
+            <div class="form-group">
+                <label for="mensaje">Mensaje (opcional):</label>
+                <textarea id="mensaje" name="mensaje" rows="4"></textarea>
+            </div>
+            <button type="submit">Confirmar asistencia</button>
+        </form>
     </section>
 
     <footer>
-        <p><i class="fas fa-rings-wedding"></i> ¡Gracias por acompañarnos en este día tan especial! <i class="fas fa-glass-cheers"></i></p>
+        <p>Gracias por acompañarnos en este día tan especial.</p>
     </footer>
 
     <script src="scripts.js"></script>
