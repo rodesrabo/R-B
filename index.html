@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boda de [Nombres]</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="hero">
+        <img src="hero-image.jpg" alt="Foto de portada" class="hero-image">
+        <div class="hero-text">
+            <h1>Bienvenidos a nuestra boda</h1>
+            <p>Fecha: [Fecha de la boda]</p>
+            <p>Ubicación: [Ubicación de la boda]</p>
+        </div>
+    </header>
+
+    <section id="confirmacion">
+        <h2><i class="fas fa-envelope"></i> Confirmación de invitados</h2>
+        <form>
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <button type="submit">Confirmar asistencia</button>
+        </form>
+    </section>
+
+    <section id="video-invitacion">
+        <h2><i class="fas fa-video"></i> Video invitación</h2>
+        <video controls>
+            <source src="video-invitacion.mp4" type="video/mp4">
+            Tu navegador no soporta la reproducción de videos.
+        </video>
+    </section>
+
+    <section id="lista-regalos">
+        <h2><i class="fas fa-gift"></i> Lista de regalos</h2>
+        <div class="regalo">
+            <img src="regalo1.jpg" alt="Regalo 1">
+            <p>Descripción del regalo 1</p>
+            <div class="barra-completitud">
+                <div class="progreso" style="width: 50%;"></div>
+            </div>
+            <p>50% completado</p>
+            <form>
+                <label for="cuota1">Cuota:</label>
+                <input type="number" id="cuota1" name="cuota" min="50" required>
+                <button type="submit">Aportar</button>
+            </form>
+            <form>
+                <label for="nota1">Nota de felicitación:</label>
+                <textarea id="nota1" name="nota"></textarea>
+                <button type="submit">Enviar nota</button>
+            </form>
+            <div class="qr">
+                <p>Escanea el código QR para pagar:</p>
+                <img src="qr-code.png" alt="Código QR">
+            </div>
+        </div>
+        <div class="regalo">
+            <img src="regalo2.jpg" alt="Regalo 2">
+            <p>Descripción del regalo 2</p>
+            <div class="barra-completitud">
+                <div class="progreso" style="width: 0%;"></div>
+            </div>
+            <p>0% completado</p>
+            <form>
+                <label for="cuota2">Cuota:</label>
+                <input type="number" id="cuota2" name="cuota" min="50" required disabled>
+                <button type="submit" disabled>Aportar</button>
+            </form>
+            <form>
+                <label for="nota2">Nota de felicitación:</label>
+                <textarea id="nota2" name="nota" disabled></textarea>
+                <button type="submit" disabled>Enviar nota</button>
+            </form>
+            <div class="qr">
+                <p>Escanea el código QR para pagar:</p>
+                <img src="qr-code.png" alt="Código QR">
+            </div>
+        </div>
+        <!-- Repetir div .regalo para cada regalo -->
+    </section>
+
+    <section id="regalos-efectivo">
+        <h2><i class="fas fa-money-bill-wave"></i> Regalos en efectivo</h2>
+        <p>Escanea el código QR para hacer un regalo en efectivo:</p>
+        <img src="qr-code.png" alt="Código QR">
+    </section>
+
+    <footer>
+        <p>Gracias por acompañarnos en este día tan especial.</p>
+    </footer>
+
+    <script src="scripts.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</body>
+</html>
