@@ -5,35 +5,50 @@ body {
     background-color: #f4f4f4;
 }
 
-header, section, footer {
-    padding: 20px;
-    margin: 20px;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+header {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 10px 0;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
 }
 
-header.hero {
-    position: relative;
-    text-align: center;
-    color: white;
+header h1 {
+    margin: 0;
+    color: #333;
+}
+
+.hero {
+    margin-top: 60px; /* Ajusta esto según la altura de tu header */
 }
 
 .hero-image {
     width: 100%;
     height: auto;
-    max-height: 100vh; /* Esto evita que la imagen sea más alta que la pantalla */
+    max-height: 100vh;
     object-fit: cover;
 }
 
-.hero-text {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: rgba(0, 0, 0, 0.5);
+.info-boda {
+    background-color: #fff;
     padding: 20px;
-    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.info-boda p {
+    margin: 10px 0;
+}
+
+.info-boda a {
+    color: #0066cc;
+    text-decoration: none;
+}
+
+.info-boda a:hover {
+    text-decoration: underline;
 }
 
 h1, h2 {
@@ -82,6 +97,18 @@ footer {
     text-align: center;
 }
 
+/* Ajuste para los QR en la lista de regalos */
+.regalo .qr img {
+    max-width: 200px; /* Aumentamos el tamaño máximo */
+    width: 100%; /* Asegura que la imagen se ajuste al contenedor */
+    height: auto;
+}
+
+/* Mantenemos el tamaño original para el QR de regalos en efectivo */
+#regalos-efectivo .qr img {
+    max-width: 100px;
+}
+
 @media (max-width: 600px) {
     header, section, footer {
         margin: 10px;
@@ -94,6 +121,13 @@ footer {
     }
 
     .qr img {
-        max-width: 80px;
+        max-width: 100px;
+    }
+
+    .regalo .qr img {
+        max-width: 150px; /* Ajustamos para móviles */
+    }
+    #regalos-efectivo .qr img {
+        max-width: 80px; /* Mantenemos el tamaño más pequeño para móviles */
     }
 }
