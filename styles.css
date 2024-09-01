@@ -13,8 +13,35 @@ header, section, footer {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
+header.hero {
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+.hero-image {
+    width: 100%;
+    height: auto;
+    max-height: 100vh; /* Esto evita que la imagen sea más alta que la pantalla */
+    object-fit: cover;
+}
+
+.hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 8px;
+}
+
 h1, h2 {
     color: #333;
+}
+
+h2 i {
+    margin-right: 10px;
 }
 
 form {
