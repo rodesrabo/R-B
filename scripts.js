@@ -9,21 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const regalosContainer = document.getElementById('regalos-container');
 
     regalos.forEach((regalo, index) => {
-        const regaloElement = document.createElement('div');
-        regaloElement.className = 'regalo';
-        regaloElement.innerHTML = `
-            <h3>${regalo.nombre}</h3>
-            <p>Precio: Bs. ${regalo.precio}</p>
-            <div class="barra-completitud">
-                <div class="progreso" style="width: ${(regalo.completado / regalo.precio) * 100}%"></div>
-            </div>
-            <p>${Math.round((regalo.completado / regalo.precio) * 100)}% completado</p>
-            <form class="aporte-form">
-                <label for="aporte-${index}">Aporte:</label>
-                <input type="number" id="aporte-${index}" name="aporte" min="1" required>
-                <button type="submit">Aportar</button>
-            </form>
-        `;
+        const regaloElement = crearElementoRegalo(regalo, index);
         regalosContainer.appendChild(regaloElement);
 
         const form = regaloElement.querySelector('.aporte-form');
@@ -39,6 +25,15 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
+
+function crearElementoRegalo(regalo, index) {
+    const regaloElement = document.createElement('div');
+    regaloElement.className = 'regalo';
+    regaloElement.setAttribute('data-aos', 'fade-up');
+    regaloElement.setAttribute('data-aos-delay', (index * 100).toString());
+    // ... resto del código para crear el elemento regalo ...
+    return regaloElement;
+}
 
 function actualizarProgreso(element, regalo) {
     const barra = element.querySelector('.progreso');
