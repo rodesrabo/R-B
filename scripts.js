@@ -50,3 +50,25 @@ function actualizarProgreso(element, regalo) {
 // Aquí puedes añadir la lógica para transferir fondos de regalos incompletos
 // cuando se termine el plazo. Esto probablemente requerirá una función
 // que se ejecute en una fecha específica o mediante un botón de administrador.
+
+document.addEventListener('DOMContentLoaded', function() {
+    const formConfirmacion = document.getElementById('form-confirmacion');
+    
+    formConfirmacion.addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        const nombre = document.getElementById('nombre').value;
+        const contacto = document.getElementById('contacto').value;
+        const mensaje = document.getElementById('mensaje').value;
+        
+        // Aquí puedes añadir el código para enviar esta información a tu servidor
+        // Por ahora, solo mostraremos un mensaje de confirmación
+        alert(`Gracias ${nombre} por confirmar tu asistencia. Te contactaremos a través de: ${contacto}`);
+        
+        formConfirmacion.reset();
+    });
+});
+
+// Aquí puedes añadir la lógica para transferir fondos de regalos incompletos
+// cuando se termine el plazo. Esto probablemente requerirá una función
+// que se ejecute en una fecha específica o mediante un botón de administrador.
