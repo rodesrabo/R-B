@@ -1,74 +1,18 @@
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
-}
+/* ... (estilos anteriores) ... */
 
-header {
-    background-color: rgba(255, 255, 255, 0.8);
-    padding: 10px 0;
-    text-align: center;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    z-index: 1000;
-}
-
-header h1 {
-    margin: 0;
-    color: #333;
-}
-
-.hero {
-    margin-top: 60px; /* Ajusta esto según la altura de tu header */
-}
-
-.hero-image {
-    width: 100%;
-    height: auto;
-    max-height: 100vh;
-    object-fit: cover;
-}
-
-.info-boda {
-    background-color: #fff;
+#lista-regalos {
     padding: 20px;
-    text-align: center;
+    background-color: #fff;
+    margin: 20px 0;
+    border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.info-boda p {
-    margin: 10px 0;
-}
-
-.info-boda a {
-    color: #0066cc;
-    text-decoration: none;
-}
-
-.info-boda a:hover {
-    text-decoration: underline;
-}
-
-h1, h2 {
-    color: #333;
-}
-
-h2 i {
-    margin-right: 10px;
-}
-
-form {
-    margin-top: 10px;
-}
-
-input, textarea, button {
-    display: block;
-    margin-top: 10px;
+.regalo {
+    margin-bottom: 20px;
     padding: 10px;
-    width: 100%;
-    max-width: 300px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
 }
 
 .barra-completitud {
@@ -81,53 +25,17 @@ input, textarea, button {
 .progreso {
     background-color: #76c7c0;
     height: 20px;
+    transition: width 0.5s ease-in-out;
 }
 
-.qr {
-    margin-top: 10px;
+.qr-general {
     text-align: center;
+    margin-top: 20px;
 }
 
-.qr img {
-    max-width: 100px;
+.qr-general img {
+    max-width: 200px;
     height: auto;
 }
 
-footer {
-    text-align: center;
-}
-
-/* Ajuste para los QR en la lista de regalos */
-.regalo .qr img {
-    max-width: 200px; /* Aumentamos el tamaño máximo */
-    width: 100%; /* Asegura que la imagen se ajuste al contenedor */
-    height: auto;
-}
-
-/* Mantenemos el tamaño original para el QR de regalos en efectivo */
-#regalos-efectivo .qr img {
-    max-width: 100px;
-}
-
-@media (max-width: 600px) {
-    header, section, footer {
-        margin: 10px;
-        padding: 10px;
-    }
-
-    input, textarea, button {
-        width: 100%;
-        max-width: 100%;
-    }
-
-    .qr img {
-        max-width: 100px;
-    }
-
-    .regalo .qr img {
-        max-width: 150px; /* Ajustamos para móviles */
-    }
-    #regalos-efectivo .qr img {
-        max-width: 80px; /* Mantenemos el tamaño más pequeño para móviles */
-    }
-}
+/* ... (resto de los estilos) ... */

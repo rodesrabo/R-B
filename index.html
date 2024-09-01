@@ -16,82 +16,26 @@
     </section>
 
     <section class="info-boda">
-        <p>Fecha: [Fecha de la boda]</p>
-        <p>Ubicación: <a href="https://maps.app.goo.gl/N4PB5YfnJ4JDRHzN8" target="_blank">Ver en Google Maps</a></p>
-    </section>
-
-    <section id="confirmacion">
-        <h2><i class="fas fa-envelope"></i> Confirmación de invitados</h2>
-        <form>
-            <label for="nombre">Nombre:</label>
-            <input type="text" id="nombre" name="nombre" required>
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
-            <button type="submit">Confirmar asistencia</button>
-        </form>
-    </section>
-
-    <section id="video-invitacion">
-        <h2><i class="fas fa-video"></i> Video invitación</h2>
-        <video controls>
-            <source src="video-invitacion.mp4" type="video/mp4">
-            Tu navegador no soporta la reproducción de videos.
-        </video>
+        <p>Fecha: 18 de enero de 2025</p>
+        <p>Ubicación del salón: <a href="https://maps.app.goo.gl/N4PB5YfnJ4JDRHzN8" target="_blank">Ver en Google Maps</a></p>
     </section>
 
     <section id="lista-regalos">
         <h2><i class="fas fa-gift"></i> Lista de regalos</h2>
-        <div class="regalo">
-            <img src="regalo1.jpg" alt="Regalo 1">
-            <p>Descripción del regalo 1</p>
-            <div class="barra-completitud">
-                <div class="progreso" style="width: 50%;"></div>
-            </div>
-            <p>50% completado</p>
-            <form>
-                <label for="cuota1">Cuota:</label>
-                <input type="number" id="cuota1" name="cuota" min="50" required>
-                <button type="submit">Aportar</button>
-            </form>
-            <form>
-                <label for="nota1">Nota de felicitación:</label>
-                <textarea id="nota1" name="nota"></textarea>
-                <button type="submit">Enviar nota</button>
-            </form>
-            <div class="qr">
-                <p>Escanea el código QR para pagar:</p>
-                <img src="qr-code.png" alt="Código QR">
-            </div>
+        <p>Puedes aportar a cualquier regalo de la lista. Al finalizar el plazo, los fondos de regalos incompletos se transferirán al regalo más cercano a completarse.</p>
+        <div id="regalos-container">
+            <!-- Los regalos se cargarán aquí dinámicamente con JavaScript -->
         </div>
-        <div class="regalo">
-            <img src="regalo2.jpg" alt="Regalo 2">
-            <p>Descripción del regalo 2</p>
-            <div class="barra-completitud">
-                <div class="progreso" style="width: 0%;"></div>
-            </div>
-            <p>0% completado</p>
-            <form>
-                <label for="cuota2">Cuota:</label>
-                <input type="number" id="cuota2" name="cuota" min="50" required disabled>
-                <button type="submit" disabled>Aportar</button>
-            </form>
-            <form>
-                <label for="nota2">Nota de felicitación:</label>
-                <textarea id="nota2" name="nota" disabled></textarea>
-                <button type="submit" disabled>Enviar nota</button>
-            </form>
-            <div class="qr">
-                <p>Escanea el código QR para pagar:</p>
-                <img src="qr-code.png" alt="Código QR">
-            </div>
+        <div class="qr-general">
+            <p>Escanea este código QR para hacer tu aporte:</p>
+            <img src="qr-code-general.png" alt="Código QR para aportes">
         </div>
-        <!-- Repetir div .regalo para cada regalo -->
     </section>
 
     <section id="regalos-efectivo">
         <h2><i class="fas fa-money-bill-wave"></i> Regalos en efectivo</h2>
-        <p>Escanea el código QR para hacer un regalo en efectivo:</p>
-        <img src="qr-code.png" alt="Código QR">
+        <p>Si prefieres hacer un regalo en efectivo, puedes usar este código QR:</p>
+        <img src="qr-code-efectivo.png" alt="Código QR para regalos en efectivo">
     </section>
 
     <footer>
@@ -99,6 +43,5 @@
     </footer>
 
     <script src="scripts.js"></script>
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </body>
 </html>
